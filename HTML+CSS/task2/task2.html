@@ -8,54 +8,193 @@
       margin: 0;
       padding: 0;
     }
+    body{
+      font-size: 12px;
+      font-family: "Microsoft Yahei";
+    }
+    #entireFramework{/*为整个框架设置背景色*/
+      width:1300px;
+      background-color: #ddd;
+    }
     #navigator{/*设置导航栏*/
       background: #313131;
-      width: 1280px;
+      width: 1270px;
       height: 60px;
       padding-left:30px; /*将百度图标往右移30px*/
     }
-    .content{
-      border:1px solid #aaa;/*给五大主div加上边框*/
-      width:1250px;
-      margin-top:5px;
-      margin-left:5px 
+    #navigator a:link{/*导航a标签设置样式*/
+      color:#fff;
+      text-decoration: none;
     }
-    #navigator ul li{
+    #navigator a:visited{/*导航a标签设置样式*/
+      color:#fff;
+      text-decoration: none;
+    }
+    #navigator #lastLi a{
+      color:#999;
+    }
+    .content{
+      background-color: #fff;
+      border:1px solid #ddd;/*给五大主div加上边框*/
+      width:1220px;
+      margin:20px auto;
+      border-right: 2px solid #aaa;
+      border-bottom:2px solid #aaa; 
+      padding:30px;
+    }
+    #navigator ul{
+      float: right;
+      margin-right:20px; 
+    }
+    #navigator li{
       float:left;
-      color:white;
-      padding:0 10px;
+      color:black;
+      padding:20px 40px 20px 0;
+    }
+
+    /*内容样式*/
+    h2,h4{
+      color:#777;
+    }
+    p{
+      text-indent: 2em;
+    }
+    #pictureList{
+      margin-left: 20px;
       list-style: none;
+    }
+    #picDiv div{
+      border: 1px solid #aaa;
+      width: 120px;
+      height: 120px;
+      text-align: center;/*水平居中*/
+      font-size: 8px;
+      margin-left: 40px;
+      padding-top: 10px;
+    }
+    #picDiv div img{
+      width:100px;
+      height:80px;
+      margin-top:8px;
+    }
+    ol{
+      margin-left: 30px;
+    }
+    table{
+      width: 1220px;
+      border: 1px solid #ccc;
+      /*border-collapse: collapse;为表格设置合并边框模型：*/
+      cellspacing:"0";/*表示单元格之间间隙为0*/
+    }
+    table td{
+      border: 1px solid #dee;
+      padding: 3px;
+    }
+    #thirdRow td{
+      border-bottom: 1px solid #ccc;
+    }
+    #firstRow td{
+      background-color: #333;
+      color: white;
+      font-weight: bold;
+    }
+    #lastRow{
+      background-color: #ddd;
+    }
+    #sideCaption{
+      font-weight: bold;
+      font-size: 15px;
+      height: 40px;
+      border-left: 2px solid #aaa;
+      line-height: 40px;
+      padding-left: 13px;
+    }
+    #form{
+      margin:20px 50px 20px 170px;
+    }
+    #lastContent{
+      width: 1200px;
+      margin-left: 10px;
+    }
+    .inputInfo{
+      line-height: 40px;
+      color: #999;
+      padding-left:97px;   
+    }
+    .password{
+      line-height: 20px;
+      margin-top: 10px;
+    }
+    #secondLabel{
+      margin-left: 24px;
+    }
+    #personalInfo{
+      line-height: 30px;
+      margin: 10px 50px;
+      position: relative;
+    }
+    #hobby input{
+      margin: 10px 0 10px 10px;
+      position: relative;
+      top:2px;
+    }
+    #PersonalDesc{
+      display: inline-block;
+      margin-left: -24px;
+      position: relative;
+      bottom: 100px;
+    }
+    #submit{
+      background-color: #397BDE;
+      width: 1200px;
+      height: 50px;
+      font-weight: bold;
+      color: white;
+      border-radius:10px;/*设置为椭圆形*/
+      font-size: 15px;
+    }
+    #copy{
+      width: 1300px;
+      height: 80px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 80px;/*垂直居中，针对父元素高度确定的情况*/
     }
   </style>
  </head>
 
  <body>
-  <div id=navigator>
-    <img src="2.png"/>
+  
+ <div id="entireFramework">
+  <div id="navigator">
+    <img src="2.png" style="padding-top:8px"/>
     <ul>
-      <li>导航链接一</li>
-      <li>导航链接二</li>
-      <li>导航链接三</li>
-      <li>导航链接四</li>
+      <li><a href="#">导航链接一</a></li>
+      <li><a href="#">导航链接二</a></li>
+      <li><a href="#">导航链接三</a></li>
+      <li id="lastLi"><a href="#">导航链接四</a></li>
     </ul>
   </div>
 
   <div class="content">
-  <h1>文章一级标题</h1>
-    <h2>文章二级标题</h2>
+    <h1>文章一级标题</h1><br/>
+    <h2>文章二级标题</h2><br/>
+    <h4>文章作者&nbsp;文章发表时间</h4><br/>
     <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p><br/>
     <img src="1.png"></img>
-    <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
+    <br/><br/><p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
   </div>
 
   
   <div class="content">
-    <h1>另一篇文章一级标题</h1>
-    <h2>文章二级标题</h2>
-    <p>文章作者 文章发表时间</p><br/><br/>
-    <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
-    <img src="1.png"></img></img><br/>
-    <ul>
+    <h1>另一篇文章一级标题</h1><br/>
+    <h2>文章二级标题</h2><br/>
+    <h4>文章作者 文章发表时间</h4><br/>
+    <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p><br/>
+    <img src="1.png"></img>
+    <br/><br/>
+    <ul id="pictureList">
       <li>列表项目一</li>
       <li>列表项目二</li>
       <li>列表项目三</li>
@@ -64,64 +203,64 @@
 
 
 
-  <div class="content">
-    <h2>图片</h2><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+  <div class="content" id="picDiv">
+    <h2 style="color:#222">图片</h2><br/>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div><span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div><br/>
-    <div style="text-indent:2em"><!--div首段缩进-->
-      <span>好看的图片</span><br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;<img src="1.png"></img>
+    <div>
+      <span>好看的图片</span>
+      <img src="1.png"></img>
     </div>
   </div>
 
 
 
   <div class="content">
-    <h1>最后一篇文章一级标题</h1>
-    <h2>文章二级标题</h2>
-    <span>文章作者&nbsp;文章发表时间</span><br/>
+    <h1>最后一篇文章一级标题</h1><br/>
+    <h2>文章二级标题</h2><br/>
+    <h4>文章作者&nbsp;文章发表时间</h4><br/>
     <ol>
       <li>排名1</li>
       <li>排名2</li>
       <li>排名3</li>
     </ol>
-    <p>下面是一个表格，给表格加一个border="1"好让你看出是一个表格</p>
-    <table border="1">
-      <tr>
+    <br/>
+    <caption>下面是一个表格，给表格加一个border="1"好让你看出是一个表格</caption>
+    <table cellspacing=0 cellpadding=0>
+      <tr id="firstRow">
         <td>表头</td>
         <td>表头</td>
         <td>表头</td>
@@ -131,7 +270,7 @@
         <td>表内容单元格</td>
         <td><a href="#">操作</a></td>
       </tr>
-      <tr>
+      <tr id="thirdRow">
         <td>表内容单元格</td>
         <td>表内容单元格</td>
         <td><a href="#">操作</a></td>
@@ -146,34 +285,42 @@
         <td>表内容单元格</td>
         <td><a href="#">操作</a></td>
       </tr>
-      <tr>
-        <td>总计</td>
-        <td colspan="2">1000</td>
+      <tr id="lastRow">
+        <td style="font-weight:bold">总计</td>
+        <td colspan="2" style="font-weight:bold">1000</td>
       </tr>
     </table>
   </div>
 
 
 
-  <div class="content"> 
-    <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-    <h2>侧栏注册窗口标题</h2>
+  <div class="content" id="lastContent"> 
+  <div id="sideCaption">这里以后是一个侧栏，这是侧栏的标题</div><br/>
+  <form id="form">
+    <label for="emailAddress">请输入邮箱地址：</label><input id="emailAddress" type="text" value="这是一个文本输入框"/><br/><span class="inputInfo">邮箱地址请按要求格式输入</span><br/>
+    <label for="password" id="secondLabel">请输入密码：</label><input type="passworld" class="password" id="password" value="*******"/><br/>
+    <label for="password1">请重复输入密码：</label><input type="passworld" class="password" id="password1" value="*******"/><br/>
+    <span class="inputInfo">密码请为6-16位英文数字</span><br/>
 
-    <label for="emailAddress">请输入邮箱地址：</label><input id="emailAddress" type="text" value="这是一个文本输入框"/><br/><br/>
-    <span>邮箱地址请按要求格式输入</span><br/><br/>
-    <label for="password">请输入密码：</label><input type="passworld" id="password" value="这是一个文本输入框"><label for="password1">请重复输入密码：</label><input type="passworld" id="password1" value="这是一个文本输入框"><br/><br/><span>密码请为6-16位英文数字</span><br/><br/><br/>
+    <div id="personalInfo">
     性别：<input type="radio" name="gender" value="mail" checked="checked"/>男
-    <input type="radio" name="gender" value="femail"/>女&nbsp;
+    <input type="radio" name="gender" value="femail"/>女<br/>
     城市：
     <select>
       <option selected="selected">北京</option>
       <option>上海</option>
       <option>天津</option>
-    </select>
-    爱好：<input type="checkbox" name="hobby" value="sport"/>运动<input type="checkbox" name="hobby" value="art"/>艺术<input type="checkbox" name="hobby" value="science"/>科学
-    <label>个人描述：</label><textarea>这是一个多行输入框，输入您的个人描述</textarea>
-    <input type="submit" value="确认提交" name="submit"/><br/>
-    版权所有&copy;<!--&copy表示版权符号-->
+    </select><br/>
+    爱好：
+    <span id="hobby"><input type="checkbox" name="hobby" value="sport"/>运动<input type="checkbox" name="hobby" value="art"/>艺术<input type="checkbox" name="hobby" value="science"/>科学<br/>
+    </span>
+    <span id="PersonalDesc">个人描述：</span><textarea rows="8" cols="120">这是一个多行输入框，输入您的个人描述</textarea><br/>
+    </div>
+  </form>
+  <input type="submit" value="确认提交" name="submit" id="submit"/><br/>
+    
   </div>
+  <div id="copy">版权所有&copy;<!--&copy表示版权符号--></div>
+ <div> 
  </body>
 </html>
