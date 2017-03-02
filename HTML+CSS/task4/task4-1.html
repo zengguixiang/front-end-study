@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>定位和居中问题--div宽度高度根据内容自适应</title>
+  <style>
+    #outBox{
+    	position: absolute;
+    	left:50%;
+      top:50%;
+    }
+    #content{
+    	/*width: 400px;
+    	height: 200px;*/
+    	background-color: #ccc;
+      padding:20px;
+    	position:relative;
+    	left:-50%;
+      top:-50%;
+    	overflow: hidden;/*隐藏左上角和右下角圆形四分之三部分*/
+    }
+    .circle{
+    	height: 100px;
+    	width: 100px;
+    	background-color: #fc0;
+    	border-radius:50%;/*设置弧度，使其成为圆形*/
+    }
+    #leftTop{
+    	position: relative;
+    	top:-300px;
+    	left: ;
+    }
+    #rightBottom{
+    	position: relative;
+    	right: ;
+    	bottom:500px;
+    }
+  </style>
+ </head>
+
+ <body>
+   <div id="outBox"> 
+   	 <div id="content">
+      <p style="text-indent:2em; line-height:1.5em">管理学家斯蒂芬·P·罗宾斯认为：团队就是由两个或者两个以上的，相互作用，相互依赖的个体，为了特定目标而按照一定规则结合在一起的组织有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。管理学家斯蒂芬·P·罗宾斯认为：团队就是由两个或者两个以上的，相互作用，相互依赖的个体，为了特定目标而按照一定规则结合在一起的组织有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。
+      </p>
+   	 </div>
+     <div id="leftTop" class="circle"></div>
+     <div id="rightBottom" class="circle"></div>
+   </div>
+ </body>
+</html>

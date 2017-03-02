@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>三栏式布局</title>
+  <style>
+  	*{
+      margin:0;
+      padding:0;
+    }
+    p{
+      text-indent: 2em;
+      line-height: 22px;
+      font-size: 13px;
+    }
+    h2{
+      text-align: center;
+    }
+	  #container{
+      padding:20px;
+      background-color: #eee;
+      border: 1px solid #999;
+      margin: 20px;
+      /*overflow: auto;清除浮动*/
+    }
+    #container:before{
+      content: "";
+      display: table;
+    }
+    #container:after{
+      content: "";
+      display: table;
+      clear:both;
+    }
+    #wrap{
+      float: left;/*左浮动*/
+    }
+    #wrap #teamIntroduction{
+      margin:0 142px 0 220px; /*设置左右的外边距，留出空白的位置给左右两列*/
+      background-color: #fff;
+      border: 1px solid #aaa;
+      padding:15px 15px;
+
+    }
+    #teamLogo{
+      width: 200px;
+      float: left;    /*左浮动*/
+      background-color: #fff;
+      border: 1px solid #aaa;
+      margin-left: -100%;/**/
+      text-align: center;
+      padding: 10px 0;
+    }
+    #teamName{
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "雅黑";
+      margin-left:20px; 
+      position: relative;
+      bottom:60px;
+    }
+    #personalLogo{
+      width: 120px;
+      border:1px solid #aaa;
+      float: left;/*左浮动*/
+      background-color: #fff;
+      margin-left: -123px;/**/
+      padding: 15px 0;
+      text-align: center;
+    }
+  </style>
+ </head>
+
+ <body>
+   <div id="container">
+      <div id="wrap">
+         <div id="teamIntroduction">
+            <span>
+              <h2>团队介绍</h2><br/>
+              <p>团队（Team）是由基层和管理层人员组成的一个共同体，它合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。</p>
+              <p>团队的构成要素总结为5P，分别为目标、人、定位、权限、计划。团队和群体有着根本性的一些区别，群体可以向团队过渡。一般根据团队存在的目的和拥有自主权的大小将团队分为四种类型：问题解决型团队、自我管理型团队、多功能型团队、共同目标型团队、正面默契型团队。</p>
+              <p>有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。</p></br>
+              <p>管理学家斯蒂芬·P·罗宾斯认为：团队就是由两个或者两个以上的，相互作用，相互依赖的个体，为了特定目标而按照一定规则结合在一起的组织有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。管理学家斯蒂芬·P·罗宾斯认为：团队就是由两个或者两个以上的，相互作用，相互依赖的个体，为了特定目标而按照一定规则结合在一起的组织有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。管理学家斯蒂芬·P·罗宾斯认为：团队就是由两个或者两个以上的，相互作用，相互依赖的个体，为了特定目标而按照一定规则结合在一起的组织有多少教科书就有多少种关于团队的解释，这里把团队定义为：团队是由员工和管理层组成的一个共同体，该共同体合理利用每一个成员的知识和技能协同工作，解决问题，达到共同的目标。有多少教科书就有多少种关于团队的解释，这里把团队定义为：</p>
+            </span>
+         </div>
+      </div>
+      <div id="teamLogo">
+            <img src="team.png" width="80" height="80"/><span id="teamName">加油</span>
+         </div>
+      <div id="personalLogo">
+        <span>张琴琴</span><br/><img src="1.png" width="80" height="80"/><br/><br/>
+        <span>马芳芳</span><br/><img src="2.png" width="80" height="80"/><br/><br/>
+        <span>李慧慧</span><br/><img src="3.png" width="80" height="80"/><br/><br/>
+        <span>刘素素</span><br/><img src="4.png" width="80" height="80"/>
+      </div>
+      <!--<div style="clear:both"></div>清除浮动，父元素自适应高度，高度为子元素的最大高度-->
+   </div>
+ </body>
+</html>
