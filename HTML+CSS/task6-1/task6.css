@@ -350,11 +350,11 @@ time{
 
 #bottom{
 	height:30px;
-	border-top:1px solid #938e8c;
+	border-top:2px solid #938e8c;
 	width:892px;
 	margin:0 auto;
-	position:relative;
-	top:-3px;
+/* 	position:relative;
+	top:-3px; */
 }
 #bottom span{
 	font-size:12px;
