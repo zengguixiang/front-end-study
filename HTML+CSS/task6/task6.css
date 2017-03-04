@@ -1,0 +1,365 @@
+*{
+    margin:0;
+	padding:0;
+}
+body{
+	font-size:12px;
+}
+#entilePage{
+	height:1386px;
+	width:980px;
+}
+#top{
+	height:61px;
+	width:892px;
+	margin:0 auto;
+	border-bottom:2px solid #938e8c;
+}
+#top div{
+	width:110px;
+	height:61px;
+	background-color:#d45d5c;
+	float:left;
+}
+#top span{
+    color:#fff;
+	font-size:12px;
+	font-family:"SimHei";
+	position:relative;
+	top:40px;
+	left:5px;
+}
+time{	
+	font-size:12px;
+	color:#d45d5c;
+	font-family:"SimHei";
+	float:right;
+	margin-top:40px;
+}
+#middle{
+	height:1264px;
+	width:892px;
+	margin:0 auto;
+}
+#middle-top{
+	margin-top:30px;
+}/*清除浮动*/
+#middle-top:before{
+	content:"";
+	display:table;
+}/*清除浮动*/
+#middle-top:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+#frontEndFoundation{
+	width:641px;
+	float:left;
+}
+#picDiv{
+	width:641px;
+	height:301px;
+	background-image:url(1.png);
+	overflow:auto;
+}
+#picDiv div{
+	width:191px;
+	height:301px;
+	opacity:0.5;
+}
+#picDiv #leftShadow{
+	background-color:#aff;
+	float:left;
+}
+#picDiv #rightShadow{
+	background-color:#fcf;
+	float:right;
+}
+#contentDiv{
+	width:641px;
+	margin-top:10px;
+	font-family:"Microsoft yahei";
+	color:#231815;
+	line-height:23px;
+	opacity:0.7;
+}
+#contentDiv label{
+	text-decoration:underline;
+	font-weight:bold;
+	font-size:16px;
+	line-height:35px;
+}
+#contentDiv #whenDiv{
+	padding:0 12px;
+}
+#whatDiv{
+	float:left;
+	width:38%;
+}
+#whenDiv{
+	width:29%;
+	float:left;
+}
+#howDiv{
+	float:left;
+	width:29%;
+}
+#aboutTechnologe{
+	width:220px;
+	height:200px;
+	border-top:2px solid #cc8091;
+	float:right;
+	padding-top:10px;
+}
+#aboutTechnologe #p1{
+	font-size:24px;
+	color:#000;
+	font-family:"Microsoft yahei";
+	line-height:40px;
+    text-decoration:underline;
+}
+#aboutTechnologe #p1 span{
+	font-size:30px;
+}
+#aboutTechnologe #p2{
+	color:#676767;
+	font-family:"KaiTi";
+	line-height:10px;
+}
+#aboutTechnologe b{
+	font-size:100px;
+	color:#75b86b;
+	font-family:"Microsoft yahei";
+	text-decoration:underline;
+	font-style:italic;
+	line-height:140px;
+}
+#aboutTechnologe .technologeContent{
+	color:#cc8091;
+	font-family:"Microsoft yahei";
+}
+#aboutTechnologe .technologeContent .begin{
+	font-size:55px;
+}
+#aboutTechnologe .technologeContent .introduction{
+	font-size:21px;
+	position:relative;
+	bottom:14px;
+}
+#aboutTechnologe .technologeContent p{
+	position:relative;
+	bottom:30px;
+	left:84px;
+}
+#middle-bottom{
+	margin-top:40px;
+}
+#middle-bottom:before{/*清除浮动*/
+	content:"";
+	display:table;
+}
+#middle-bottom:after{/*清除浮动*/
+	content:"";
+	display:table;
+	clear:both;
+}
+#technologeFieldLeft{
+	width:415px;
+	float:left;
+}
+#technologeFieldRight{
+	width:458px;
+	float:right;
+}
+
+#technologeFieldLeft h1{
+	font-size:72px;
+	color:#f5e327;
+	font-family:"SimHei";
+	font-weight:bold;
+	font-style:italic;
+}
+#technologeFieldLeft h1 span{
+	font-size:42px;
+	color:#11456b;
+	font-style:normal;
+}
+#technologeFieldLeft h1 span #p2{
+	font-size:28px;
+	position:relative;
+	bottom:10px;
+}
+#technologeFieldLeft h1 span #p1{
+	position:relative;
+	top:-15px;
+}
+#technologeFieldLeft .outDiv{
+	border-top:2px solid #11456b;
+	padding:20px 0;
+	
+}
+#technologeFieldLeft .outDiv p{
+	font-family:"SimSun";
+	line-height:23px;
+	opacity:0.6;
+	text-indent:2em;
+}
+#technologeFieldLeft .outDiv span{
+	font-size:70px;
+	color:#f5e327;
+	font-family:"Microsoft yahei";
+	float:left;	
+	height:70px;
+    width:75px;
+	position:relative;
+	bottom:15px;
+}
+#technologeFieldLeft .outDiv img{
+	float:right;
+}
+
+#technologeFieldRight .picDiv{
+	width:458px;
+	height:275px;
+	background-image:url(3.png);
+	opacity:0.7;
+}
+#technologeFieldRight .picDiv .blackShadow{
+	height:61px;
+	line-height:61px;	
+	background-color:#000;
+	padding-top:8.5px;
+	opacity:0.7;
+	position:relative;
+	top:205px;
+}
+#technologeFieldRight .picDiv .blackShadow div{
+	border-left:3px solid #72b16a;
+	height:44px;
+	line-height:44px;
+	margin-left:30px;
+	color:#fff;
+	padding-left:10px;
+	font-size:26px;
+	font-family:"Microsoft yahei";
+}
+#technologeFieldRight .picDiv span{
+	font-size:12px;
+	color:#72b16a;
+	font-style:italic;
+	letter-spacing:140%;
+}
+.upperTriangle{/*上三角*/
+	width:0;
+	height:0;
+	border-top:5px solid transparent;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	border-bottom:8px solid #08426B;
+	position:relative;
+	right:6px;
+	bottom:10px;
+}
+#frontEndCatalog{
+	width:429px;
+	height:318px;
+	background-color:#F7D3D3;
+	margin-top:30px;
+	padding:30px 0 0 30px;
+}
+#frontEndCatalog p{
+	color: #73736B;
+	padding-bottom:16px;
+	font-family:"SimSun";
+	font-size:16px;
+}
+#frontEndCatalog p i{
+	font-size:12px;
+}
+#frontEndCatalogBottom{
+	width:459px;
+	height:191px;
+	margin:17px 200px 0 -30px;
+}
+#frontEndCatalog .redRegion{
+	width:264px;
+	height:160px;
+	background-color:#EA6767;
+	color:#fff;
+	font-family:"Microsoft yahei";
+	float:left;
+}
+#frontEndCatalog .redRegion #zero{
+	font-size:110px;	
+	position:relative;
+	left:3px;
+	top:7px;
+}
+#frontEndCatalog .redRegion div{
+	width:192px;
+	height:84px;
+	border-left:2px solid #fff;
+	float:right;
+	margin-top:40px;
+	padding-left:2px;
+}
+#frontEndCatalog .redRegion div span{
+	font-size:21px;
+	font-style:italic;
+	padding-bottom:3px;
+}
+#frontEndCatalog .redRegion div .helloworld{
+	font-size:12px;
+	font-style:normal;
+	padding-left:6px;
+	color:#fff;
+	font-family:"SimHei";
+	line-height:13px;
+}
+#frontEndCatalog .wordsOfRight{
+	float:right;
+	width:195px;
+	position:relative;
+	left:12px;
+}
+#frontEndCatalog .wordsOfRight p{
+	font-size:14px;
+	line-height:16px;
+	font-family:"SimHei";
+	color:#5a5a5b;
+	font-style:italic;
+	padding-top:20px;
+	text-indent:44px;
+}
+#frontEndCatalog .quatationMark{
+	font-size:72px;
+	color:#d45d5c;
+	font-family:"SimHei";
+}
+#frontEndCatalog #QM1{
+	position:absolute;
+	top:2px;
+	left:-30px;
+}
+#frontEndCatalog #QM2{
+    position:absolute;
+	top:95px;
+	left:135px;
+}
+
+#bottom{
+	height:30px;
+	border-top:1px solid #938e8c;
+	width:892px;
+	margin:0 auto;
+	position:relative;
+	top:-15px;
+}
+#bottom span{
+	font-size:12px;
+	color:#d45d5c;
+	font-family:"SimHei";
+	float:right;
+	margin-top:3px;
+}
