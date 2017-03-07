@@ -1,0 +1,532 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	min-width:1280px;
+}
+table{
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+a:link{
+	text-decoration:none;
+}
+a:hover{
+	cursor:pointer;
+}
+.addUnderline{
+	display:inline-block;
+	width:35px;
+	height:2px;
+	background-color:#fff;
+	margin-top:15px;
+}
+header{
+	height:52px;
+}
+header #navlogo{
+	margin-top:9px;
+	margin-left:55px;
+}
+header #newWorld{
+	font-size:20px;
+	font-family:"Simhei";
+	position:relative;
+	bottom:7px;
+	left:7px;
+}
+header ul{
+	float:right;
+	width:620px;
+	position:relative;
+	bottom:44px;
+}
+header ul #firstPage{
+	border-bottom:4px solid #E74A4A;
+	height:9px;
+	color: #E74A4A;
+}
+header ul li{
+	float:left;
+	font-size:14px;
+	font-family:"Microsoft Yahei";
+	color:#7B7B7B;
+	list-style:none;
+	padding:20px 20px;
+}
+header ul li a{
+	color:#7B7B7B;
+}
+header ul li span{
+	padding-left:8px;
+	font-size:14px;
+	position:relative;
+	bottom:2px;
+	left:2px;
+	color: #E74A4A;
+}
+
+main section#content1{
+	background-image:url(images/experiance.png);
+	background-size:100% 690px;/*背景图自适应section的宽度*/
+	width:100%;
+	height:690px;
+}
+main section#content1 div{
+	width:600px;
+	position:absolute;
+	top:232px;
+	left:118px;
+	color:#fff;
+}
+main section#content1 div h1{
+	font-size:60px;
+	font-family:"FangSong_GB2312";
+}
+main section#content1 div p{
+	font-size:20px;
+	padding-top:10px;
+	line-height:30px;	
+}
+main section#content1 div input{
+	width:330px;
+	height:63px;
+	background-color:#EF524A;
+	border-style:none;
+	color:#fff;
+	font-size:28px;
+	font-family:"Microsoft Yahei";
+	margin-top:69px;
+}
+main section#content2{
+	height:250px;
+}
+main section#content2 table{
+	height:80%;
+	margin-top:20px;
+}
+main section#content2 table span{
+	font-size:15px;
+	color:#A5A5A5;
+	font-family:"Simhei";
+	line-height:25px;
+	border-left:2px solid #aaa;
+	display:block;
+}
+main section#content2 table #firstSpan{
+	border-style:none;
+}
+main section#content3{
+	height:360px;
+	background-color:#EFEFEF;
+}
+main section#content3 table span{
+	font-size:47px;
+	line-height:110px;
+	color:#A5A5A5;
+	font-family:"Microsoft Yahei";
+}
+main section#content4{
+	height:340px;
+	background-image:url(images/aboutNewWorld.png);
+	background-size:100% 100%;
+}
+main section#content4 #context{
+	display:inline;
+	text-align:center;/*这两行让section4里面的内容水平居中  section2和section3是采用外加table的方法实现水平居中*/
+	color:#fff;
+	font-family:"Microsoft Yahei";
+	position:relative;
+	top:55px;
+}
+main section#content4 #context h2{
+	font-size:30px;
+	font-family:"Simson";
+}
+main section#content4 #context #cityWord{
+	font-size:28px;
+	font-family:"Simson";
+	border-bottom:3px solid #fff;
+	padding-bottom:10px;
+}
+main section#content4 #context p{
+	font-size:15px;
+	line-height:80px;
+}
+main section#content4 #form select,#content4 #province,#content4 input{
+	width:238px;
+	height:37px;
+	margin-left:30px;
+	padding-left:10px;
+	color:#ADADAD;
+	font-size:12px;
+}
+ /*在选择框的最右侧中间显示小箭头图片*/  
+main section#content4 #form select{
+	-webkit-appearance:none;/*清楚默认样式*/
+	background: url(images/arrow.png) no-repeat 210px #fff;
+}
+main section#content4 #form input{
+    background-color:#BD4A4A;
+	border-style:none;
+	color:#fff;
+	font-size:15px;
+	font-family:"Simhei";
+}
+main section#content4 #form #province{
+	-webkit-appearance:none;/*清楚默认样式*/
+	background: url(images/arrow.png) no-repeat 219px #fff;
+	display:inline-block;
+	width:234px;
+	height:34px;
+	border:2px solid #DE9C9C;
+	position:relative;	
+	top:15px;	
+}
+main section#content4 #form #province span{
+    position:absolute; 
+	top:9px;
+	left:12px;
+}
+main section#content4 ul{
+	width:100%;
+	border:2px solid #DE9C9C;
+	border-top-style:none;
+	background-color:#E7E7E7;
+	position:absolute;
+	top:35px;
+	left:-2px;
+}
+main section#content4 ul li{
+	list-style:none;
+	padding-right:150px;
+	height:27px;
+	line-height:27px;
+	color:#737373;
+}
+main section#content4 ul #beijingLi img{
+	position:absolute;
+	left:7px;
+	top:5px;
+}
+main section#content4 ul #beijingLi{
+	background-color:#BD4A4A;
+	color:#fff;
+}
+main section#content4 ul #neimengLi{
+	padding-right:116px;
+}
+
+main section#content5{
+	height:608px;
+	margin:0 auto;
+	font-size:12px;
+}
+main section#content5 div{
+	width:220px;
+	height:390px;
+	display:inline-block;
+	position:relative;
+	border:1px solid #E7E7E7;	
+}
+main section#content5 div h4{
+	font-size:18px;
+	color:#393939;
+	font-family:"Simhei";
+	font-weight:normal;
+}
+main section#content5 div p{
+	font-size:16px;
+	color:#8C8C8C;
+	line-height:32px;
+}
+main section#content5 .firstDiv{
+	padding-top:10px;
+	border-bottom-style:none;
+}
+main section#content5 .firstDiv span{
+	display:inline-block;
+	margin-top:20px;
+	width:230px;
+	height:60px;
+	position:absolute;
+	left:-5px;
+	z-index:9999;
+	background-color:white;
+}
+main section#content5 .secondDiv{
+	border-style:none;
+	border-bottom:1px solid #E7E7E7;
+}
+main section#content5 .secondDiv h4{
+	font-size:25px;	
+}
+main section#content5 .secondDiv p{
+	width:100%;
+	line-height:25px;
+	border-bottom:1px solid #E7E7E7
+}
+main section#content5 .secondDiv img{
+	border-left:23px solid #F7F7EF;
+	border-right:23px solid #F7F7EF;
+	border-top:48px solid #F7F7EF;
+	border-bottom:48px solid #F7F7EF;
+}
+main section#content5 .thirdDiv img{
+	position:absolute;
+	right:0;
+	border-top:80px solid #FFF7EF;
+	border-left:48px solid #FFF7EF;
+} 
+main section#content5 .thirdDiv span{
+	height:52px;
+	position:absolute;
+	/*不论之前是什么类型元素(display:none 除外)设置以下 2 个句之一：
+     1. position : absolute 
+     2. float : left 或 float:right 
+	 元素的display显示类型就会自动变为以 display:inline-block
+	 */
+	bottom:-1px;
+	width:110%;
+	left:-5px;
+	background-color:#fff;
+}
+main section#content5 .fourthDiv img{
+	border-top:65px solid #FFF7F7;
+	border-left:27px solid #FFF7F7;
+	border-right:27px solid #FFF7F7;
+	border-bottom:69px solid #FFF7F7;
+}
+main section#content5 .fourthDiv span{
+	position:absolute;
+	left:-3px;
+	width:110%;
+	height:52px;
+	background-color:#fff;
+}
+
+main section#content6{
+	height:570px;
+	color:#fff;	
+}
+main section#content6 table{
+	font-family:"Microsoft JhengHei";
+	font-size:12px;
+}
+main section#content6 table .firstRow{
+	width:70%;
+	background-image:url(images/newWorld.png);
+	background-size:100% 100%;
+}
+main section#content6 table .firstRow h2{
+	font-size:40px;
+}
+main section#content6 table .firstRow h1{
+	font-size:100px;
+}
+main section#content6 table .firstRow p{
+	font-size:20px;
+	line-height:35px;
+}
+main section#content6 table .secondRow{
+	width:30%;
+	height:100%;
+	color:#ADADAD;
+	padding:50px;	
+}
+main section#content6 table .secondRow h2{
+	font-size:20px;
+	display:inline-block;
+	color:#393939;
+	line-height:50px;
+}
+main section#content6 table .secondRow span{
+	color:#E74A4A;
+}
+main section#content6 table .secondRow p{
+	text-align:left;
+	line-height:30px;
+	font-family:"Simson";
+}
+main section#content6 table .secondRow input{
+	border-color:#E7636B;
+	width:160px;
+	height:33px;
+	color:#E7636B;
+	margin-top:50px;
+}
+main section#content6 table .secondRow img{
+	margin-top:20px;
+	cursor:pointer;
+}
+
+main section#content7{
+	height:520px;
+	margin-top:-4px;
+}
+main section#content7 table h3{
+	line-height:30px;
+}
+main section#content7 table button{
+	width:169px;
+	height:43px;
+	margin-top:30px;
+	font-family:"Simhei";
+	font-size:16px;
+}
+main section#content7 table .firstRow{
+	width:33%;
+	background-color:#EF524A;
+	color:#fff;
+}
+main section#content7 table .firstRow button{
+	color:#fff;
+	background-color:#EF524A;
+}
+main section#content7 table .secondRow{
+	width:33%;
+}
+main section#content7 table .secondRow button{
+	color:#EF524A;
+	border-color:#EF524A;
+}
+main section#content7 table .secondRow span{
+	background-color:#ADADAD;
+}
+main section#content7 table .thirdRow{
+	width:34%;
+	background-image:url(images/newTime.png);
+	background-size:100% 100%;
+}
+
+main section#content8{
+	text-align:center;
+	height:750px;
+	color:#A5A5A5;
+	font-size:12px;
+	font-family:"Microsoft Yahei";
+}
+main section#content8 table{
+	width:85%;
+	margin:0 auto;
+}
+main section#content8 table .firstRow{
+	width:100%;
+	height:40%;
+}
+main section#content8 table .firstRow td h4{
+	font-size:20px;
+	line-height:60px;
+	color:#292929;
+	font-family:"Simson";
+}
+main section#content8 table .firstRow td span{
+	background-color:#E74A4A;
+	margin-top:-10px;
+}
+main section#content8 table .secondRow{
+	height:60%;
+	text-align:left;
+	vertical-align:top;
+}
+main section#content8 table .secondRow .firstCol h5{
+	font-size:15px;
+	color:#636363;
+}
+main section#content8 table .secondRow .firstCol .addStyleH5{
+	margin-top:15px;
+}
+main section#content8 table .secondRow .firstCol p{
+	margin-top:20px;
+}
+main section#content8 table .secondRow .firstCol img,main section#content8 table .secondRow .firstCol span{
+	position:relative;
+	left:240px;
+}
+main section#content8 table .secondRow .secondCol{
+	width:750px;
+	font-family:"Simhei";
+	
+}
+main section#content8 table .secondRow .secondCol form input,textarea{
+	width:310px;
+	height:30px;
+	color:#aab;
+	margin-right:30px;
+	margin-bottom:20px;
+	border-style:none;
+	background-color:#EFEFEF;
+	padding-left:15px;
+}
+main section#content8 table .secondRow .secondCol form textarea{
+	height:115px;
+	width:670px;
+	padding-top:10px;
+}
+main section#content8 table .secondRow .secondCol form #submit{
+	font-family:"Microsoft Yahei";
+	color:#313131;
+	width:685px;
+}
+footer{
+	width:100%;
+	height:410px;
+	border:1px solid #aaa;
+	background-color:#313139;
+	line-height:20px;
+	display:inline-block;
+	text-align:center;
+	position:relative;
+	color:#fff;
+}
+footer #pageFooterDiv1{
+	margin-top:60px;
+}
+footer #pageFooterDiv1 h5{
+	font-size:20px;
+	line-height:44px;
+}
+footer #pageFooterDiv1 p{
+	font-size:13px;
+	line-height:23px;
+}
+footer #pageFooterDiv1 input[type="text"]{
+	width:430px;
+	height:40px;
+	padding-left:15px;
+	margin-top:30px;
+	color:#ADADAD;
+}
+footer #pageFooterDiv1 input[type="submit"]{
+	height:44px;
+	width:80px;
+	border-style:none;
+	margin-left:-8px;
+	background-color:#73737B;
+}
+footer #pageFooterDiv1 img{
+	padding:7px;
+}
+footer #pageFooterDiv2{
+	height:60px;
+	width:100%;
+	background-color:#292939;
+	font-size:13px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	color:#fff;
+}
+footer #pageFooterDiv2 span{
+	position:absolute;
+	left:100px;
+	top:20px;
+}
+footer #pageFooterDiv2 a{
+	color:#fff;
+	position:absolute;
+	right:100px;
+	top:20px;
+}
