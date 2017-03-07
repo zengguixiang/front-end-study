@@ -4,7 +4,7 @@
 1.任务一：零基础HTML编码</br>
   　　[代码](https://github.com/zengguixiang/front-end-study/blob/master/HTML%2BCSS/task1/task1.html);[demo](https://zengguixiang.github.io/front-end-study/HTML+CSS/task1/task1.html)
    
-2.任务二：零基础HTML编码</br>
+2.任务二：零基础HTML及CSS编码（一）</br>
      [代码](https://github.com/zengguixiang/front-end-study/blob/master/HTML%2BCSS/task2/task2.html);[demo](https://zengguixiang.github.io/front-end-study/HTML+CSS/task2/task2.html)
    
 3.任务三：三栏式布局</br>
