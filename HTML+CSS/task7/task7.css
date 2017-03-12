@@ -40,8 +40,8 @@ header #newWorld{
 header ul{
 	float:right;
 	width:620px;
-	position:relative;
-	bottom:44px;
+/* 	position:relative;
+	bottom:44px; */
 }
 header ul #firstPage{
 	border-bottom:4px solid #E74A4A;
@@ -70,7 +70,7 @@ header ul li span{
 
 main section#content1{
 	background-image:url(images/experiance.png);
-	background-size:100% 690px;/*±³¾°Í¼×ÔÊÊÓ¦sectionµÄ¿í¶È*/
+	background-size:100% 690px;/*èƒŒæ™¯å›¾è‡ªé€‚åº”sectionçš„å®½åº¦*/
 	width:100%;
 	height:690px;
 }
@@ -135,7 +135,7 @@ main section#content4{
 }
 main section#content4 #context{
 	display:inline;
-	text-align:center;/*ÕâÁ½ĞĞÈÃsection4ÀïÃæµÄÄÚÈİË®Æ½¾ÓÖĞ  section2ºÍsection3ÊÇ²ÉÓÃÍâ¼ÓtableµÄ·½·¨ÊµÏÖË®Æ½¾ÓÖĞ*/
+	text-align:center;/*è¿™ä¸¤è¡Œè®©section4é‡Œé¢çš„å†…å®¹æ°´å¹³å±…ä¸­  section2å’Œsection3æ˜¯é‡‡ç”¨å¤–åŠ tableçš„æ–¹æ³•å®ç°æ°´å¹³å±…ä¸­*/
 	color:#fff;
 	font-family:"Microsoft Yahei";
 	position:relative;
@@ -163,9 +163,9 @@ main section#content4 #form select,#content4 #province,#content4 input{
 	color:#ADADAD;
 	font-size:12px;
 }
- /*ÔÚÑ¡Ôñ¿òµÄ×îÓÒ²àÖĞ¼äÏÔÊ¾Ğ¡¼ıÍ·Í¼Æ¬*/  
+ /*åœ¨é€‰æ‹©æ¡†çš„æœ€å³ä¾§ä¸­é—´æ˜¾ç¤ºå°ç®­å¤´å›¾ç‰‡*/  
 main section#content4 #form select{
-	-webkit-appearance:none;/*Çå³şÄ¬ÈÏÑùÊ½*/
+	-webkit-appearance:none;/*æ¸…æ¥šé»˜è®¤æ ·å¼*/
 	background: url(images/arrow.png) no-repeat 210px #fff;
 }
 main section#content4 #form input{
@@ -176,7 +176,7 @@ main section#content4 #form input{
 	font-family:"Simhei";
 }
 main section#content4 #form #province{
-	-webkit-appearance:none;/*Çå³şÄ¬ÈÏÑùÊ½*/
+	-webkit-appearance:none;/*æ¸…æ¥šé»˜è®¤æ ·å¼*/
 	background: url(images/arrow.png) no-repeat 219px #fff;
 	display:inline-block;
 	width:234px;
@@ -283,10 +283,10 @@ main section#content5 .thirdDiv img{
 main section#content5 .thirdDiv span{
 	height:52px;
 	position:absolute;
-	/*²»ÂÛÖ®Ç°ÊÇÊ²Ã´ÀàĞÍÔªËØ(display:none ³ıÍâ)ÉèÖÃÒÔÏÂ 2 ¸ö¾äÖ®Ò»£º
+	/*ä¸è®ºä¹‹å‰æ˜¯ä»€ä¹ˆç±»å‹å…ƒç´ (display:none é™¤å¤–)è®¾ç½®ä»¥ä¸‹ 2 ä¸ªå¥ä¹‹ä¸€ï¼š
      1. position : absolute 
-     2. float : left »ò float:right 
-	 ÔªËØµÄdisplayÏÔÊ¾ÀàĞÍ¾Í»á×Ô¶¯±äÎªÒÔ display:inline-block
+     2. float : left æˆ– float:right 
+	 å…ƒç´ çš„displayæ˜¾ç¤ºç±»å‹å°±ä¼šè‡ªåŠ¨å˜ä¸ºä»¥ display:inline-block
 	 */
 	bottom:-1px;
 	width:110%;
