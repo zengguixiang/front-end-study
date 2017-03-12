@@ -1,0 +1,47 @@
+/*容器宽度100%*/
+.container{  width:100%;  }
+
+/*清除每行内的浮动*/
+.row:before, .row:after{
+    content:"";
+    display: table;
+    clear:both;
+}
+/*选择所有类名中含有"col-"的元素*/
+[class*='col-']{
+    float:left;
+    min-height:1px;
+    width:8.33%;      /*总共12列，每列占8.33%*/
+
+}
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%}
+.col-9{width:75%}
+.col-10{width:83.33%}
+.col-11{width:92.5%}
+.col-11{width:100%}
+
+/*外轮廓*/
+.outline, .outline *{outline:1px solid #999;}
+
+/*当屏幕小于768px时*/
+@media all and (max-width:768px) {
+    .col-1 {width: 16.66%;}
+    .col-2 {width:66.66%;}
+    .col-4 {width: 50%;}
+    .row .col-4:last-of-type {width: 100%;}
+    .row .col-2:last-of-type{width:25%;}
+    .row:last-of-type .col-6{width:25%;}
+}
+p{
+    height:50px;
+    margin:20px;
+    background-color:#eee;
+    border:1px solid #999;
+}
