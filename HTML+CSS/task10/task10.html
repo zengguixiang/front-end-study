@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+            }
+            li{
+                list-style:none;
+                margin-bottom:20px;
+                padding:20px;
+            }
+            .flex-container{
+                display:flex;
+                flex-flow:row wrap;
+                justify-content: space-between;
+                align-items:center;
+            }
+            .flex-item{
+                width:150px;
+                border:1px solid #f00;
+            }
+            #li1{height:120px;}
+            #li2{height:100px;}
+            #li3{height:40px;}
+            #li4{
+                height:200px;
+                border:1px solid #0f0;
+            }
+            @media (max-width:640px){
+                #li1{order:2;}
+                #li2{order:3;}
+                #li3{order:4;}
+                #li4{order:1;}
+                .flex-container{
+                    align-items:flex-start;
+                    align-content: space-around;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="flex-container">
+            <li id="li1" class="flex-item">1</li>
+            <li id="li2" class="flex-item">2</li>
+            <li id="li3" class="flex-item">3</li>
+            <li id="li4" class="flex-item">4</li>
+        </ul>
+    </body>
+</html>
