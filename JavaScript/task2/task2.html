@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Task 02</title>
+</head>
+<body>
+    <h3>污染城市列表</h3>
+    <ul id="api-list"></ul>
+    <button id="button">显示</button>
+
+    <script>
+        //页面加载事件
+        window.onload=function() {
+            var apiData=[
+                ["北京",90],
+                ["上海",50],
+                ["福州",10],
+                ["广州",50],
+                ["成都",90],
+                ["西安",100]
+            ];
+
+
+            document.getElementById("button").onclick= function () {
+                //遍历apiData中的数据
+                for(var i=0;i<apiData.length;i++){
+                    if(apiData[i][1]>60){
+                        //创建li元素节点并追加到ul节点中
+                        var li=document.createElement("li");
+                        li.innerHTML=apiData[i][0];
+                        document.getElementById("api-list").appendChild(li);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Task 03</title>
+    </head>
+<body>
+    <ul id="source">
+        <li>北京空气质量：<b>90</b></li>
+        <li>上海空气质量：<b>70</b></li>
+        <li>天津空气质量：<b>80</b></li>
+        <li>广州空气质量：<b>50</b></li>
+        <li>深圳空气质量：<b>40</b></li>
+        <li>福州空气质量：<b>32</b></li>
+        <li>成都空气质量：<b>90</b></li>
+    </ul>
+    <ul id="resort"></ul>
+    <button id="sort-btn">排序</button>
+
+    <script>
+        function initial(){
+            var btn=document.getElementById("sort-btn");
+            btn.addEventListener("click",btnHandle,false);
+        }
+
+        //获取数据
+        function getData(){
+            var dataList=new Array(7);// 1 先声明存放数据的一维数组
+            var li=document.getElementById("source").childNodes;
+            //删除li节点数组中非节点元素（空文本节点）
+            for(var i=0;i<li.length;i++){
+                var node=li[i];
+                if(node.nodeType!=1){
+                    node.parentNode.removeChild(node);
+                }
+            }
+            //将列表中的空气质量信息放入二维数组dataList中
+            for(var i=0;i<li.length;i++){
+                dataList[i]=new Array(2);// 2 再声明存放数据的二维数组
+                dataList[i][0]=li[i].firstChild.textContent;//空气质量文本信息
+                dataList[i][1]=li[i].lastChild.innerHTML;//空气质量值
+            }
+            return dataList;
+        }
+
+        //按空气质量对data进行从小到大的排序(冒泡排序)
+        function sortApiDate(data){
+            for(var n=1;n<=data.length-1;n++){
+                for(i=0;i<data.length-n;i++){
+                    if(data[i][1]>data[i+1][1]){
+                        var temp=data[i];
+                        data[i]=data[i+1];
+                        data[i+1]=temp;
+                    }
+                }
+            }
+            return data;
+        }
+
+        //将排好的城市及空气质量指数，追加到id为resort的列表中
+        function render(data){
+            for(i=0;i<data.length;i++){
+                //创建b元素
+                var b=document.createElement("b");
+                b.innerHTML=data[i][1];
+
+                //名次
+                var ranking;
+                switch(i){
+                    case 0:ranking="第一名:";break;
+                    case 1:ranking="第二名:";break;
+                    case 2:ranking="第三名:";break;
+                    case 3:ranking="第四名:";break;
+                    case 4:ranking="第五名:";break;
+                    case 5:ranking="第六名:";break;
+                    default:ranking="第七名:";
+                }
+
+                //创建文本节点
+                var text=document.createTextNode(ranking+data[i][0]);
+
+                //创建li元素节点，并将b和text追加到li节点中
+                var li=document.createElement("li");
+                li.appendChild(text);
+                li.appendChild(b);
+
+                //将li追加到id为resort的列表中
+                document.getElementById("resort").appendChild(li);
+            }
+        }
+
+        //显示新追加的ul列表
+        function btnHandle(){
+            var data=getData();
+            var sortedData=sortApiDate(data);
+            render(sortedData);
+        }
+
+        window.addEventListener("load",initial,false);
+    </script>
+</body>
+</html>

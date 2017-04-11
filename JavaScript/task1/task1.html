@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Task 01</title>
+    </head>
+<body>
+    <label for="api-input">请输入成都今天空气质量:</label>
+    <input type="text" id="api-input"><br/>
+    <button id="button">确认填写</button>
+
+    <div>
+        您输入的值是：
+        <span id="api-display">尚无记录</span>
+    </div>
+
+    <script>
+        //页面加载事件
+        window.onload=function() {
+            //获取button元素节点
+            var button = document.getElementById("button");
+            //给按钮绑定单击事件，执行addInfo函数里的操作
+            button.onclick = addInfo;
+        }
+        function addInfo(){
+            //获取文本框api-input的值
+            var inputInfo=document.getElementById("api-input").value;
+            //获取api-input元素节点
+            var span=document.getElementById("api-display");
+            //将api-input内的文本替换为新创建的文本节点
+            span.innerHTML=inputInfo;
+        }
+    </script>
+</body>
+</html>
