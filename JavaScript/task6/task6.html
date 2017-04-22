@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Task 04</title>
+    </head>
+    <style>
+        body{text-align: center;}
+        div{
+            display: inline-block;
+            height:300px;
+            width:1000px;
+            margin-top:100px;
+        }
+        .liStyle{
+            list-style: none;
+            float:left;
+            width:30px;
+            height:30px;
+            font-size:15px;
+            color:#fff;
+            background-color:red;
+            text-align:center;
+            line-height:30px;
+            margin-right:5px;
+            margin-top:5px;
+        }
+        .cursor{
+            cursor:pointer;
+        }
+        #showArray{height:100px;}
+    </style>
+<body>
+    <div>
+        <form>
+            <label for="input">输入要插入的数字：<br/>
+                <textarea id="input"></textarea>
+            </label><br/>
+            <button type="button" id="btn-left-in">左侧入</button>
+            <button type="button" id="btn-right-in">右侧入</button>
+            <button type="button" id="btn-left-out">左侧出</button>
+            <button type="button" id="btn-right-out">右侧出</button><br/>
+        </form>
+        <ul id="showArray"></ul>
+        <form>
+            <label for="query">
+                <input type="text" id="query" placeholder="查询词"/>
+            </label>
+            <button id="btnQuery" type="button">查询</button>
+        </form>
+    </div>
+
+
+    <script>
+        var myArr=[];//存放队列数组
+        var inputArr=[];//用于存放textarea中的不同内容
+        //获取textarea中的内容，其中可能包含回车，逗号（全角或半角），顿号，空格，tab等
+        var txt=document.getElementById("input");
+        var queryTxt=document.getElementById("query");
+        //定义模式匹配:除中文、数字和英文之外的字符 中文：[\u4E00-\u9FA5]  英文：[A-Za-z]  数字：[0-9]
+        var charPattern=/[^\u4E00-\u9FA5A-Za-z0-9]/;
+        //匹配任意除了中文、英文、数字、回车、逗号、顿号、空格、tab值的字符之外的字符
+        ///[\u0000-\u00FF]/ 半角符号     /[\uFF00-\uFFFF]/ 全角符号
+        var errorCharPattern=/[^\u4E00-\u9FA5A-Za-z0-9\r,，\s、\t]/;
+
+
+        //初始化
+        function initial(){
+            //获取元素节点
+
+            var btnLeftIn=document.getElementById("btn-left-in");
+            var btnRightIn=document.getElementById("btn-right-in");
+            var btnLeftOut=document.getElementById("btn-left-out");
+            var btnRightOut=document.getElementById("btn-right-out");
+            var btnQuery=document.getElementById("btnQuery");
+
+            initInput();//初始化输入框
+
+            //"左侧入"绑定单击事件
+            btnLeftIn.addEventListener("click",function(){
+                //左侧插入并显示
+                leftIn(txt.value);
+                render();
+                initInput();
+            },false);
+
+            //"右侧入"绑定单击事件
+            btnRightIn.addEventListener("click",function(){
+                rightIn(txt.value);
+                render();
+                initInput();
+            },false);
+
+            //"左侧出"绑定单击事件
+            btnLeftOut.addEventListener("click",function(){
+                console.log(resultArr);
+                myArr.shift();
+                render();
+                initInput();
+            },false);
+
+            //"右侧出"绑定单击事件
+            btnRightOut.addEventListener("click",function(){
+                myArr.pop();
+                render();
+                initInput();
+            },false);
+
+            btnQuery.onclick= function () {
+                inquery(queryTxt.value);
+            }
+        }
+
+
+        function leftIn(str){
+            var resultArr=getContent(str);//要插入的数组
+            if(resultArr!=false){
+                for(var i=resultArr.length-1;i>=0;i--){
+                    myArr.unshift(resultArr[i]);
+                }
+            }
+        }
+
+        function rightIn(str){
+            var resultArr=getContent(str);//要插入的数组
+            if(resultArr!=false){
+                for(var i=0;i<resultArr.length;i++){
+                    myArr.push(resultArr[i]);
+                }
+            }
+
+        }
+
+        //通过回车、逗号（全角或半角）、顿号、空格、tab等将textarea中的不同内容分隔开,放到一个数组里
+        function getContent(text){
+            if(text==""){
+                alert("请输入要插入的值");
+                return false;
+            }else if(errorCharPattern.test(text)){//如果textarea中的字符串中有非合法字符
+                alert("您输入了非法的字符");
+                return false;
+            }else{
+                //resText为去除text的前后非字母、数字和英文等字符的字符串
+                var resText=deleteAfterBefore(text);
+
+                //遍历resultText，通过回车、逗号、顿号、空格、tab等分隔符将resText分成不同的内容并保存在一个数组中
+                var resultArr=[],j=0;
+                resultArr[0]="";
+                for(var i=0;i<resText.length;i++){
+                    if(/[\u4E00-\u9FA5\dA-Za-z]/.test(resText[i])){//如果resText[i]是英文、数字或中文
+                        if(/[\d]/.test(resText[i])){//如果resText[i]是数字
+                            resultArr[j]+=resText[i].toString();
+                        }else{
+                            resultArr[j]+=resText[i];
+                        }
+                    }else{//如果resText[i]是回车、逗号、顿号、空格、tab等分隔符
+                        j++;
+                        resultArr[j]="";
+                    }
+                }
+                return resultArr;
+            }
+        }
+
+        //去除textarea内容的前后非字母、数字和英文的字符
+        function deleteAfterBefore(text){
+            var textCopy=text.slice();//将对text的操作转移到textCopy上
+            var m=0;
+            while(charPattern.test(textCopy[m])){
+                text=textCopy.slice(m+1);//删除开始不是字母、数字和英文的字符
+                m++;
+            }
+
+            textCopy=text.slice();
+            var n=textCopy.length;
+            while(charPattern.test(textCopy[n-1])){
+                text=textCopy.slice(0,n-1);//删除开始不是字母、数字和英文的字符
+                n--;
+            }
+            return text;
+        }
+
+        //input初始化
+        function initInput(){
+            txt.value="";
+            txt.focus();
+        }
+
+        //创建要显示的li列表,并追加到ul中
+        function render(){
+            ul=document.getElementById("showArray");
+            //应先将ul的innerHTML内容清除；
+            ul.innerHTML="";
+
+            for(var i=0;i<myArr.length;i++){
+                var li=document.createElement("li");
+                li.innerHTML = myArr[i];
+                li.id="item-"+i;//设置li的id值
+                li.setAttribute("class", "liStyle");
+                ul.appendChild(li);
+                li.onmouseover = function () {
+                   this.setAttribute("style", "cursor:pointer")
+                };
+
+                //执行li单击删除操作
+                deleteSelected(i);
+            }
+        }
+
+
+        //给每一个添加的li添加点击事件(点击即删除)
+        function deleteSelected(i){
+            var temp=document.getElementById("item-"+i);
+            temp.addEventListener("click",function(){
+                index=temp.id.substr(5);//获取删除元素的起始索引位置
+                myArr.splice(index,1);
+                render();
+                initInput();
+            },false);
+        }
+
+        //查询函数,更改匹配上的内容的背景颜色；传入的参数为查询文本框中的内容
+        function inquery(txt){
+            var reg=new RegExp(txt);
+            for(var i=0;i<myArr.length;i++){
+                var matches=reg.exec(myArr[i]);
+                if(matches!=null){//如果匹配上myArr数组的内容，就把myArr的索引值存入
+                    var Li=document.getElementById("item-"+i);
+                    Li.style.background="#00f";
+                }
+            }
+        }
+
+        window.addEventListener("load",initial,false);
+    </script>
+</body>
+</html>
